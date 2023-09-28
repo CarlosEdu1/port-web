@@ -86,7 +86,7 @@ header {
 /* pseudo-elemento */
 header::before {
   content: '';
-  background-image: url('/assets/imagens/Backdrop.png');
+  background-image: url("../imagens/Backdrop.png");
   background-size: cover;
   height: 100%;
   width: 100%;
