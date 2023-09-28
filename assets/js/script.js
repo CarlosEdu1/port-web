@@ -13,7 +13,7 @@ const campoPrazo = document.querySelector("#prazo")
 
 campoPrazo.addEventListener("input", function() {
   const labelPrazo = document.querySelector("label[for='prazo']")
-labelPrazo.innerHTML = `Prazo: ${campoPrazo.value} semanas`
+labelPrazo.innerHTML = `Prazo: ${campoPrazo.value} dia(s)`
 calcular()
 })
 
@@ -29,7 +29,12 @@ function calcular() {
   let qtde = campoQtde.value
   let valor = qtde * 100
 
-  if(campoTipo.value == 2) valor  += 1000
+  if(campoTipo.value == 1) valor  += 100
+  if(campoTipo.value == 2) valor  += 110
+  if(campoTipo.value == 3) valor  += 130
+  if(campoTipo.value == 4) valor  += 90
+  if(campoTipo.value == 5) valor  += 220
+  if(campoTipo.value == 6) valor  += 145
 
   if(campoLayoutSim.checked) valor += qtde * 50
 
@@ -40,5 +45,24 @@ function calcular() {
   
   resultado.innerText = `R$ ${valor}`
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const cupomInput = document.getElementById('cupom-input');
+  const cupomSubmit = document.getElementById('cupom-submit');
+  const cupomMessage = document.getElementById('cupom-message');
+
+  cupomSubmit.addEventListener('click', function () {
+    const cupomCode = cupomInput.value;
+
+  
+    if (cupomCode === 'SUPLEDEVSOFC') {
+      cupomMessage.textContent = 'Cupom aplicado com sucesso! Desconto de 10% aplicado.';
+    } else {
+      cupomMessage.textContent = 'Cupom inválido. Por favor, insira um cupom válido.';
+    }
+
+    cupomInput.value = '';
+  });
+});
+
 //mostrar o preço
 

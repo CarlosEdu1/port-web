@@ -20,6 +20,57 @@ body {
   font-family: var(--font-default);
 }
 
+#menu-icon {
+  color: #dddddd;
+  text-shadow: #000 2px 2px 2px;
+  position: fixed;
+  z-index: 10;
+  top: 1rem;
+  cursor: pointer;
+  right: 0%;
+}
+
+#menu-icon.change {
+  right: 24px;
+}
+
+#menu {
+  position: fixed;
+  background-color: #ac5606;
+  text-shadow: #000 2px 2px 2px;
+  height: 100vh;
+  padding: 3rem;
+  z-index: 9;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 1s;
+}
+
+#menu a {
+  color: #dddddd;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+#menu.open {
+  transform: translateX(0);
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+}
+
+#menu li {
+  padding: 1rem;
+  border-radius: .5rem;
+  transition: background-color .5s;
+}
+
+#menu li:hover {
+  background-color: #e78f3d;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -35,7 +86,7 @@ header {
 /* pseudo-elemento */
 header::before {
   content: '';
-  background-image: url('/portifolio-senac-web/assets/imagens/Backdrop.png');
+  background-image: url('/assets/imagens/Backdrop.png');
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -61,7 +112,7 @@ header h1 {
   font-size: 4rem;
 }
 
-span {
+header span {
   color: #ac5606;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
   font-size: 2rem;
@@ -191,7 +242,7 @@ span {
 
 input[type="text"],
 input[type="number"] select {
-  background-color: rgb(11, 188, 188);
+  background-color: rgb(170, 90, 29);
   border: 0;
   border-radius: .5rem;
   outline: none;
@@ -208,4 +259,35 @@ input[type="range"] {
 
 input:focus {
   border: solid 1px #f8be88;
+}
+
+.cupom-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#cupom-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#cupom-submit {
+  background-color: #a15420;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#cupom-submit:hover {
+  background-color: #000000;
+}
+
+#cupom-message {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }

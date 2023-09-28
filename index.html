@@ -7,14 +7,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SupleDev’s Store</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="icon" type="image/x-icon" href="/assets/imagens/favicon.png">
   <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/menu.js" defer></script>
 </head>
 
 <body>
 
-  <header>
+  <div id="menu-icon">
+    <span class="material-symbols-outlined">
+      menu
+    </span>
+  </div>
 
+  <aside id="menu">
+    <nav>
+      <ul>
+        <li>
+          <a href="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="icon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+
+            <span>home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#secao-apresentacao">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="icon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Apresentação</span>
+          </a>
+        </li>
+        <li>
+          <a href="#secao-projetos">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="icon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z" />
+            </svg>
+            <span>Projeto</span>
+        </li>
+        <li>
+          <a href="#secao-orcamento">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="icon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Orçamento</span>
+        </li>
+
+      </ul>
+    </nav>
+  </aside>
+
+  <header id="home">
     <h1>SupleDev's</h1> <!--texto-->
     <span>High quality supplements</span> <!--texto-->
     <a href="#secao-apresentacao" class="botao">Saiba mais</a>
@@ -22,7 +77,7 @@
 
 
   <section id="secao-apresentacao">
-    <img src="assets/imagens/Ellipse 1.png" alt="Foto de uma mulher preparando a sua suplementação.">
+    <img src="./assets/imagens/Ellipse 1.png" alt="Foto de uma mulher preparando a sua suplementação.">
     <div>
       <h3>Os suplementos alimentares mais bem avaliados da América Latina!</h3>
       <h6> Os suplementos da SupleDev’s são aprovados em todos os laudos, qualidade comprovada e preço justo! </h6>
@@ -82,48 +137,63 @@
   </section>
 
   <section id="secao-orcamento">
-    <h2>Simule um orçamento para o seu site</h2>
+    <h2>Simule seu pedido de suplementos</h2>
 
     <form id="form-orcamento">
       <div class="campo linha">
-        <label for="">Nome</label>
+        <label for="">Digite seu Nome</label>
         <input type="test" id="nome">
       </div>
 
       <div class="campo">
-        <label for="">Qtde de páginas</label>
+        <label for="">Qtde desejável de suplementos</label>
         <input type="number" min="1" id="qtde">
       </div>
 
       <div class="campo">
-        <label for="tipo">Tipo</label>
+        <label for="tipo">Sabor</label>
         <select name="tipo" id="tipo">
-          <option value="1">estático</option>
-          <option value="2">dinâmico</option>
+          <option value="1">Chocolate</option>
+          <option value="2">Baunilha</option>
+          <option value="3">Morango</option>
+          <option value="4">Torta de limão</option>
+          <option value="5">Cookies and Cream</option>
+          <option value="6">Sorvete de creme</option>
+
         </select>
       </div>
 
       <div class="campo linha">
-        <label for="layout">Precisa de layout?</label>
+        <label for="layout">Você já comprou na SuppleDev's?</label>
         <div>
           <input name="layout" type="radio" id="layout_sim">
-          <label for="layout_sim">sim, preciso</label>
+          <label for="layout_sim">sim, já comprei</label>
           <input name="layout" type="radio" id="layout_nao">
-          <label for="layout_nao">não, já tenho</label>
+          <label for="layout_nao">não, é a primeira vez</label>
         </div>
       </div>
 
       <div class="linha">
-        <input type="checkbox" id="js">
-        <label for="js">Meu site precisa de JavaScript</label>
+
+        <label for="js">Você gostaria de comprar com cupom?</label>
+
+        <div class="cupom-bar">
+          <input type="text" id="cupom-input" placeholder="Digite o cupom">
+          <button id="cupom-submit">Aplicar</button>
+        </div>
+        <div id="cupom-message"></div>
       </div>
 
+
+
+
       <div class="campo linha">
-        <label for="prazo">Prazo</label>
-        <input type="range" id="prazo" min="2" max="10">
+        <label for="prazo">Entrega em quantos dias?</label>
+        <input type="range" id="prazo" min="1" max="7">
       </div>
 
       <output>R$ 100,00</output>
+
 
     </form>
   </section>
