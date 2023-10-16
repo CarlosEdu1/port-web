@@ -1,6 +1,6 @@
 # port-web
 
-Site de portifolio pessoal. Projeto da disciplina de PW do Centro Universitário SENAC
+Site básico sobre suplementos que criei na aula de Programação Web
 
 ## Tarefas 
 
